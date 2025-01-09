@@ -17,10 +17,23 @@ private:
 	int height{WINDOW_HEIGHT};
 
 	GLFWwindow* window {nullptr};
+
+	//vulkan
 	vk::Instance vulkan_instance{ nullptr };
+	//debug callback
+	vk::DebugUtilsMessengerEXT debugMessenger{ nullptr };
+	//dispatch instance dispatcher
+	vk::DispatchLoaderDynamic dldi;
+	
+	vk::PhysicalDevice physicalDevice{ nullptr };
+
 
 	void create_glfw_window();
+
 	void make_instance();
+
+	void make_device();
+
 };
 
 #endif

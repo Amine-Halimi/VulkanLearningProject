@@ -8,5 +8,8 @@
 //Statically linking vulkan library
 #include "iostream"
 #include "vector"
+#include "set"
+#include "string"
+#include "optional"
 
 #endif
